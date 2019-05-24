@@ -18,9 +18,8 @@ files: params/  pysixd/  t_less_toolkit/  tools/
 copied from [sixd_toolkit](https://github.com/thodan/sixd_toolkit)  
 deal with model reading/rendering, datasets reading and evaluation  
 
-### (3) library to be installed (with source cmake file)
 
-### install opencv3 with contrib rgbd module  
+### (3) install opencv3 with contrib rgbd module  
 
 hwo to install opencv3.4.6: https://blog.csdn.net/echoamor/article/details/83022352
 
@@ -36,18 +35,19 @@ cd opencv/build
 cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=/home/bibo/Data/patchlinemod_dataset/opencv_contrib/modules ..
 # [optional] use the gui
 cmake-gui ..  # CMAKE_BUILD_TYPE =RELEASE; OPENCV_EXTRA_MODULES_PATH=/opencv_contrib/modules;BUILD_opencv_world=YES;
-make -j8 #sudo apt install libzstd1, libzstd-dev
+make -j8
 ### !! restart virtual env
+
 sudo make install
 sudo sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
-vim /etc/bash.bashrc
+sudo vim /etc/bash.bashrc
 add PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 add export PKG_CONFIG_PATH
 ```
 hwo to uninstall opencv:  https://zhuanlan.zhihu.com/p/38738976	
 
-### install pybind11 
+### (4) install pybind11 
 
 ```sh
 git clone https://github.com/pybind/pybind11
@@ -58,7 +58,7 @@ make check -j 4
 make install
 ```
 
-### install open3d(for icp)
+### (5) install open3d(for icp)
 install open3d(http://www.open3d.org/docs/compilation.html#ubuntu)
 ```sh
 cd open3d
@@ -86,12 +86,13 @@ pip3 install open3d-0.5.0.0-cp35m-linux_x86_64.whl
 import open3d
 ```
 
-### install others
+### (6) install others
 ```sh
-pip install -r requirements.txt
+pip inst
+all -r requirements.txt
 ```
 
-### (4) C++ and Python packages install steps:
+### (7) C++ and Python packages install steps:
 
 ```sh
 cd linemodLevelup/
@@ -106,7 +107,7 @@ python patch_linemod_test.py
 
 ```
 
-### (5) how to evaluate
+### (8) how to evaluate
 
 patch_linemod_test.py, 57-66, select dataset & mode, train & test  
 tools/eval_calc_errors.py, 19-27, select dataset, run  
