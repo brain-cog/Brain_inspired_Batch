@@ -84,6 +84,9 @@ pip3 install open3d-0.5.0.0-cp35m-linux_x86_64.whl
 
 # test in python
 import open3d
+
+# replace installed open3d with new  
+sudo cp -R ./projectpath/Open3D_bk /usr/local/include/Open3D
 ```
 
 ### (6) install others

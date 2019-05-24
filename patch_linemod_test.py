@@ -64,8 +64,8 @@ def nms(dets, thresh):
 dataset = 'doumanoglou'
 # dataset = 'toyotalight'
 
-#mode = 'render_train'
-mode = 'test'
+mode = 'render_train'
+# mode = 'test'
 
 dp = get_dataset_params(dataset)
 detector = linemodLevelup_pybind.Detector(16, [4, 8], 8)  # min features; pyramid strides; num clusters
@@ -422,7 +422,7 @@ if mode == 'render_train':
 
                     mask = (depth > 0).astype(np.uint8) * 255
 
-                    visual = True
+                    visual = False
                     if visual:
                         cv2.imshow('rgb', rgb)
                         cv2.imshow('mask', mask)
@@ -899,7 +899,7 @@ if mode == 'test':
                     if i == len(scores) - 1:  # best result
                         draw_axis(rgb, render_R, render_t, K)
 
-                visual = True
+                visual = False
                 # visual = False
                 if visual:
                     cv2.imshow('raw', raw_match_rgb)
