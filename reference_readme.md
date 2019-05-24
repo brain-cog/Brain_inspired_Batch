@@ -12,19 +12,10 @@
 https://itsfoss.com/dpkg-returned-an-error-code-1/
 
 
-install opencv3.4.1:
-https://blog.csdn.net/echoamor/article/details/83022352
-git clone -b 3.4 https://github.com/opencv/opencv.git
-https://github.com/opencv/opencv_contrib.git
-
-then in build:sudo make install
-sudo sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'
-sudo ldconfig
-
 
 opencv 3.3.1 https://www.learnopencv.com/install-opencv3-on-ubuntu/
 
-uninstall opencv:https://zhuanlan.zhihu.com/p/38738976		
+	
 
 
 
@@ -73,31 +64,7 @@ sudo make install
 
 
 
-install open3d(http://www.open3d.org/docs/compilation.html#ubuntu)
-cd open3d
-util/scripts/install-deps-ubuntu.sh
 
-node -v
-npm -v
-
-mv build build.bk
-mkdir build 
-cd build
-
-cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
-sudo make -j4
-
-sudo make python-package
-sudo make pip-package
-sudo make install-pip-package (to make sure there are files in /usr/local/include,if not step to sudo pip3 install open3d......)
-cd Open3d/build/lib/python_package/pip_package
-sudo pip3 install open3d-0.5.0.0-cp35m-linux_x86_64.whl (for python2 then can get lib in python3.5_dist-packages)
-
-sudo make install
-
-test
-python3 
-import open3d
 
 
 install opencv3.4.6:

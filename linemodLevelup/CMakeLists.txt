@@ -10,7 +10,6 @@ SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -fopenmp")
 
 # opencv
 set(CUDA_TOOLKIT_ROOT_DIR /usr/local/cuda-8.0)
-# set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /home/meiqua/anaconda3/envs/furnace) 
 set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /usr/local/lib)
 find_package(OpenCV 3 REQUIRED)
 
@@ -33,7 +32,8 @@ endif ()
 
 # pybind11
 find_package(PythonLibs 3 REQUIRED)
-find_package(pybind11 REQUIRED PATHS "/home/casia/pybind11/build" CMAKE_CURRENT_LIST_DIR "/home/casia/pybind11/build") 
+# find_package(pybind11 REQUIRED PATHS "/home/casia/pybind11/build" CMAKE_CURRENT_LIST_DIR "/home/casia/pybind11/build") 
+find_package(pybind11 REQUIRED)
 include(Cmake/FindNumPy.cmake)
 
 set(TSNE_DIR /home/casia/patch_linemod/linemodLevelup/tsnecpp)
