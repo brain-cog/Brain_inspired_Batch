@@ -111,10 +111,16 @@ python patch_linemod_test.py
 ```
 
 ### (8) how to evaluate
+```sh
+# train the model, change 57-66,select dataset & mode, train & test 
+python patch_linemod_test.py
+# the trained model is saved in path Data/patchlinemod_dataset/public/datasets/doumanoglou/models/
 
-patch_linemod_test.py, 57-66, select dataset & mode, train & test  
-tools/eval_calc_errors.py, 19-27, select dataset, run  
+# test the model, change 19-27, select dataset, run
+python tools/eval_calc_errors.py
+
 tools/eval_loc.py, 180-186, select dataset, run  
 Results are saved to top_level_folder/eval  
+```
 
 [Chinese blog](https://zhuanlan.zhihu.com/p/45538349)
