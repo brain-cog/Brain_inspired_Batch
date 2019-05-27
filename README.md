@@ -112,11 +112,14 @@ python patch_linemod_test.py
 
 ### (8) how to evaluate
 ```sh
+# change the top_level_path in dataset_params.py
 # train the model, change 57-66,select dataset & mode, train & test 
-python patch_linemod_test.py
 # the trained model is saved in path Data/patchlinemod_dataset/public/datasets/doumanoglou/models/
+# the train data is in Data/patchlinemod_dataset/public/datasets/doumanoglou/train
+# the test dsata is in Data/patchlinemod_dataset/public/datasets/doumanoglou/test
+python patch_linemod_test.py
 
-# test the model, change 19-27, select dataset, run
+# calculate the test performance by code, change 19-27, select dataset, run
 python tools/eval_calc_errors.py
 
 tools/eval_loc.py, 180-186, select dataset, run  
