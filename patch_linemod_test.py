@@ -64,8 +64,8 @@ def nms(dets, thresh):
 dataset = 'doumanoglou'
 # dataset = 'toyotalight'
 
-mode = 'render_train'
-# mode = 'test'
+# mode = 'render_train'
+mode = 'test'
 
 dp = get_dataset_params(dataset)
 detector = linemodLevelup_pybind.Detector(16, [4, 8], 8)  # min features; pyramid strides; num clusters

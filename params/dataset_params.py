@@ -7,7 +7,9 @@ from os.path import join as pjoin
 
 from pysixd import inout
 
-top_level_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# top_level_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+top_level_path = '/home/bibo/Data/patchlinemod_dataset/'
 
 def get_dataset_params(name, model_type='', train_type='', test_type='',
                        cam_type=''):

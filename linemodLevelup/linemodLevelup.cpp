@@ -3022,6 +3022,7 @@ Mat poseRefine::get_depth_edge(Mat &depth_)
     cv::bitwise_not(dst, dst);
     cv::distanceTransform(dst, dst, CV_DIST_C, 3);  //dilute distance
 
+    bool debug_ = false;
     if(debug_){
         auto view_dep = [](cv::Mat dep){
             cv::Mat map = dep;

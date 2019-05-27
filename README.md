@@ -119,6 +119,7 @@ python patch_linemod_test.py
 # the test dsata is in Data/patchlinemod_dataset/public/datasets/doumanoglou/test
 python patch_linemod_test.py
 
+# change the top_level_path in eval_calc_errors.py in line 28
 # calculate the test performance by code, change 19-27, select dataset, run
 python tools/eval_calc_errors.py
 

@@ -24,7 +24,10 @@ import ipdb
 dataset = 'doumanoglou'
 # dataset = 'toyotalight'
 
-top_level_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# top_level_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+top_level_path = '/home/bibo/Data/patchlinemod_dataset/'
+
+
 result_base = pjoin(top_level_path, 'public', 'sixd_results')
 result_paths = [
     pjoin(result_base, 'patch-linemod_' + dataset),
