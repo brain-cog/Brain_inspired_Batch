@@ -15,6 +15,9 @@ from pysixd import renderer
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# top_level_path = os.path.dirname(os.path.abspath(__file__))
+top_level_path = '/home/bibo/Data/patchlinemod_dataset/'
+
 def draw_axis(img, R, t, K):
     # unit is mm 
     #draw the line in results R(rodrigues bianhuan) t(position) K = dp['cam']['K'] (K-means?)
@@ -103,7 +106,6 @@ while current_dep < dep_max:
 
 print('\ndep anchors:\n {}, \ndep range: {}\n'.format(dep_anchors, dep_range))
 
-top_level_path = os.path.dirname(os.path.abspath(__file__))
 template_saved_to = join(dp['base_path'], 'linemod_render_up', '%s.yaml')
 tempInfo_saved_to = join(dp['base_path'], 'linemod_render_up', '{:02d}_info_{}.yaml')
 result_base_path = join(top_level_path, 'public', 'sixd_results', 'patch-linemod_'+dataset)

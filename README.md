@@ -113,16 +113,21 @@ python patch_linemod_test.py
 ### (8) how to evaluate
 ```sh
 # change the top_level_path in dataset_params.py
+# change the top_level_path in patch_linemod_test in 19
 # train the model, change 57-66,select dataset & mode, train & test 
 # the trained model is saved in path Data/patchlinemod_dataset/public/datasets/doumanoglou/models/
 # the train data is in Data/patchlinemod_dataset/public/datasets/doumanoglou/train
 # the test dsata is in Data/patchlinemod_dataset/public/datasets/doumanoglou/test
+# test result is in Data/patchlinemod_dataset/public/sixd_results
 python patch_linemod_test.py
 
 # change the top_level_path in eval_calc_errors.py in line 28
 # calculate the test performance by code, change 19-27, select dataset, run
+# the result is saved in 
 python tools/eval_calc_errors.py
 
+# change the top_level_path in eval_loc.py in 248
+# change dataset in 255
 tools/eval_loc.py, 180-186, select dataset, run  
 Results are saved to top_level_folder/eval  
 ```

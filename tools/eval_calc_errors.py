@@ -118,7 +118,7 @@ for result_path in result_paths:
             im_id_prev = im_id
             im_id, obj_id = map(int, filename.split('_'))
 
-            if res_id % 10 == 0:
+            if res_id % 1 == 0:
                 dataset_str = dataset
                 if test_type != '':
                     dataset_str += ' - {}'.format(test_type)
@@ -169,10 +169,11 @@ for result_path in result_paths:
                     t_g = gt['cam_t_m2c']
 
                     if error_type == 'vsd':
+                        # ipdb.set_trace()
                         e = pose_error.vsd(R_e, t_e, R_g, t_g, models[obj_id],
                                            depth_im, K, vsd_delta, vsd_tau,
                                            vsd_cost)                    #error and accuracy
-                        # ipdb.set_trace()
+                        
                     elif error_type == 'add':
                         e = pose_error.add(R_e, t_e, R_g, t_g, models[obj_id])
                     elif error_type == 'adi':

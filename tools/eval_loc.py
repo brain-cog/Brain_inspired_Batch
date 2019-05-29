@@ -245,8 +245,8 @@ def calc_scores(scene_ids, obj_ids, matches, n_top, do_print=True):
 def main():
     # Paths to pose errors (calculated using eval_calc_errors.py)
     #---------------------------------------------------------------------------
-    top_level_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+    # top_level_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    top_level_path = '/home/bibo/Data/patchlinemod_dataset/'
     #dataset = 'hinterstoisser'
     # dataset = 'tless'
     # dataset = 'tudlight'
